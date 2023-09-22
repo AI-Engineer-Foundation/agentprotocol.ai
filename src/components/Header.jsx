@@ -55,7 +55,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
         <div className="flex gap-4">
           <MobileSearch />
           <div className="hidden min-[416px]:contents">
-            <Button href="https://github.com/e2b-dev/agent-protocol">
+            <Button href="https://github.com/AI-Engineers-Foundation/agent-protocol">
               GitHub
             </Button>
           </div>

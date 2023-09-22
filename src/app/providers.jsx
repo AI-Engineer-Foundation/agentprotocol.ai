@@ -32,7 +32,6 @@ export function Providers({ children }) {
     <ThemeProvider
       attribute="class"
       disableTransitionOnChange
-      forcedTheme="light"
     >
       <ThemeWatcher />
       {children}

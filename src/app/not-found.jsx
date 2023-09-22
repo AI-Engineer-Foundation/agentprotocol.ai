@@ -13,7 +13,7 @@ export default function NotFound() {
           Page not found
         </h1>
         <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
-          Sorry, we couldn't find the page you’re looking for.
+          Sorry, we couldn&apos;t find the page you&apos;re looking for.
         </p>
         <Button href="/" arrow="right" className="mt-8">
           Back to docs

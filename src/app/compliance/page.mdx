@@ -6,18 +6,12 @@ export const metadata = {
 
 # Test your agent
 
-To check if your agent is compliant with the Agent Protocol, you can use the [Agent Protocol SDK](https://github.com/e2b-dev/agent-protocol/sdk/python). The SDK is written in `python`. {{ className: 'lead' }}
+To check if your agent is compliant with the Agent Protocol, you can use the [Agent Protocol Testing Suite](https://github.com/AI-Engineers-Foundation/agent-protocol/tree/main/testing_suite). The testing suite uses `npm` and `newman` to run a Postman routine against the agent. {{ className: 'lead' }}
 
-You can install by running the following command:
-
-```shell
-pip install agent-protocol
-```
-
-after that you can simply run the following command to test your agent:
+You can test your agent's compliance by running the following command:
 
 ```shell
-agent-protocol test --url <your-agent-url>
+URL=http://localhost:8000 bash -c "$(curl -fsSL https://agentprotocol.ai/test.sh)"
 ```
 
 The command will run a series of tests against your agent endpoints and check if the responses are compliant with the Agent Protocol.
@@ -41,14 +35,13 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install agent protocol
-        run: pip install agent-protocol
+      - name: Install agent requirements
+        run: pip install -r requirements.txt
 
-      - name: Run agent
-        run: <command to run your agent>
-
-      - name: Validate agent protocol compliance
-        run: agent-protocol test --url <your-agent-url>
+      - name: Run agent and validate compliance
+        run: |
+          <command to run your agent> & # Make sure to use the ampersand to detach your agent
+          URL=<your-agent-url> bash -c "$(curl -fsSL https://agentprotocol.ai/test.sh)"
 ```
 
 You can then add a badge to your agent to show it is agent protocol compliant.

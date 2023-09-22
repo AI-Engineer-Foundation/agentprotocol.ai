@@ -106,7 +106,7 @@ function SmallPrint() {
       </p>
       <div className="flex gap-4">
         <SocialLink
-          href="https://github.com/e2b-dev/agent-protocol"
+          href="https://github.com/AI-Engineers-Foundation/agent-protocol"
           icon={GitHubIcon}
         >
           Follow us on GitHub
