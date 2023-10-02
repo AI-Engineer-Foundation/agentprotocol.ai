@@ -267,7 +267,12 @@ export function CodeGroup({ children, title, ...props }) {
     <CodeGroupContext.Provider value={true}>
       <Container
         {...containerProps}
-        className="not-prose my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10"
+        style={{
+          ...containerProps?.style,
+          marginLeft: 'calc(50% - min(50%, 33rem))',
+          marginRight: 'calc(50% - min(50%, 33rem))',
+        }}
+        className="not-prose max-w-3xl my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10"
       >
         <CodeGroupHeader title={title} {...headerProps}>
           {children}

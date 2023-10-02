@@ -215,6 +215,13 @@ export const navigation = [
       { title: 'Other possibilities', href: '/clients/others' },
     ],
   },
+  {
+    title: 'Contributing',
+    links: [
+      { title: 'Contribution Guide', href: '/contributing/guide' },
+      { title: 'Code of Conduct', href: '/contributing/code-of-conduct' },
+    ]
+  }
 ]
 
 export function Navigation(props) {
