@@ -1,3 +1,4 @@
+# THIS REPO HAS BEEN MERGED INTO THE MAIN REPO: https://github.com/AI-Engineer-Foundation/agent-protocol/tree/main/apps/agentprotocol.ai
 # Agent Protocol docs
 
 Agent Protocol docs are available at [agentprotocol.ai](https://agentprotocol.ai).
